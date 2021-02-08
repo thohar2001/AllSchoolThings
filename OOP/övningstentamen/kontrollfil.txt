@@ -1,0 +1,4 @@
+Filename: C:\Users\thomp\OneDrive\Skrivbord\Code Stuff\övningstentamen\spraken.txt
+Date: 2020-12-02 09:51:02
+Words processed: 358
+Total unique words: 194

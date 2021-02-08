@@ -1,0 +1,4 @@
+Filename: C:\Users\thomp\OneDrive\Skrivbord\Code Stuff\övningstentamen\shorterspraken.txt
+Date: 2020-11-18 10:01:52
+Words processed: 56
+Total unique words: 51
