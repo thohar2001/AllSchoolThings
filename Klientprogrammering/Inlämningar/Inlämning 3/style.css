@@ -1,0 +1,29 @@
+.buttons > div {
+    border: 1px solid black;
+    text-align: center;
+    position: relative;
+    padding: 2em;
+}
+
+.outer {
+    border: 1px solid black;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.buttons {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    display: grid;
+    width: 30%;
+    margin: 2em;
+    gap: 4em;
+}
+
+@media only screen and (min-width: 800px) {
+    .buttons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+    }
+}
