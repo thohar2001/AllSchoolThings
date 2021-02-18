@@ -5,4 +5,6 @@ function noPaste(eve) {
     alert("No pasting!")   
 }
 
-input.addEventListener('paste', noPaste)
+window.addEventListener('load', () => {
+    input.addEventListener('paste', noPaste)
+})

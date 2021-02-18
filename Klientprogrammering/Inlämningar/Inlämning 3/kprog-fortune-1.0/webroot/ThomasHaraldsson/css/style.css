@@ -1,0 +1,108 @@
+body {
+    background-color: black;
+}
+
+.buttons {
+    background-color: blue;
+    border-radius: 2em;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    outline: none;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+}
+
+p {
+    background-color: violet;
+    border-radius: 1em;
+    box-sizing: border-box;
+    color: darkblue;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 2em;
+    padding: 0.2em;
+    text-align: center;
+    width: auto;
+}
+
+p::first-line {
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+.buttons:hover {
+    background-color: red;
+}
+
+.menu {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;   
+}
+
+#matches {
+    color: red;
+    font-size: xx-large;
+    margin-top: 0.5em;
+}
+
+#searchbar {
+    margin: 2em 1em 0em 0.5em;
+    text-align: center;
+}
+
+#searchbar button {
+    background-color: honeydew;
+    color: black;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+#searchbar input {
+    background-color: honeydew;
+    font-size: 1.5em;
+    margin-right: 1.5em;
+}
+
+#errorjoke {
+    display: none;
+    text-align: center;
+    margin-top: 0.5em;
+    font-size: xx-large;
+    color: red;
+}
+
+@media only screen and (min-width: 800px) {
+    .menu {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 4em;
+    }
+
+    p::first-line {
+        font-size: xx-large;
+    }
+
+    .buttons {
+        font-size: x-large;
+    }
+
+    p {
+        border-radius: 2em;
+        padding: 0.5em;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    #searchbar button {
+        font-size: 2em;
+    }
+    
+    #searchbar input {
+        font-size: 2em;
+    }
+}

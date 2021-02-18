@@ -1,29 +1,58 @@
-.buttons > div {
-    border: 1px solid black;
-    text-align: center;
-    position: relative;
-    padding: 2em;
-}
-
-.outer {
-    border: 1px solid black;
-    display: flex;
-    width: 100%;
-    height: auto;
+body {
+    background-color: black;
 }
 
 .buttons {
+    color: white;
+    background-color: blue;
+    border-radius: 2em;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+    padding: 1em;
+    outline: none;
+}
+
+p {
+    border-radius: 2em;
+    box-sizing: border-box;
+    background-color: violet;
+    text-align: center;
+    font-weight: bold;
+    color: darkblue;
+    font-size: x-large;
+    padding: 0.2em;
+    width: auto;
+    margin: 2em;
+}
+
+.buttons:hover {
+    background-color: red;
+}
+
+.menu {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    display: grid;
-    width: 30%;
-    margin: 2em;
-    gap: 4em;
+    width: 100%;
+    gap: 2em;
 }
 
 @media only screen and (min-width: 800px) {
-    .buttons {
+    .menu {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        width: 100%;
+        grid-template-rows: 1fr;
+        gap: 4em;
+    }
+
+    .buttons {
+        font-size: x-large;
+    }
+
+    p {
+        padding: 0.5em;
+        margin-left: 5em;
+        margin-right: 5em;
     }
 }
