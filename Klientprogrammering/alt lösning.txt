@@ -1,0 +1,71 @@
+class JokeService {
+    getUrl(url) {
+        return fetch(url)
+                .then(handleErrors)
+                .then(resp => resp.json())
+                .then(json => json.fortune)
+    }
+    getRandom() {
+        return this.getUrl('/api/fortune')
+    }
+    getShort() {
+        return this.getUrl('/api/short')
+    }
+    getShower() {
+        return this.getUrl('/api/showerthought')
+    }
+    getTraditional() {
+        return this.getUrl('/api/traditional')
+    }
+    search(query) {
+        if(query.length < 3) {
+            throw new Error("Query too short!")
+        }
+        query = encodeURIComponent(query);
+        return fetch(`/api/query?q=${query}`)
+            .then(resp => {
+                if (!resp.ok) {
+                    throw new Error(resp.status)
+                }
+                return resp.json()
+            })
+    }
+}
+
+
+____________
+
+
+    try {
+        if (text === 'Random') {
+            resp = await aJokeService.getRandom()
+        }
+        else if (text === 'Short') {
+            resp = await aJokeService.getShort()
+        }
+        else if (text === 'Shower') {
+            resp = await aJokeService.getShower()
+        }
+        else if (text === 'Traditional') {
+            resp = await aJokeService.getTraditional()
+        }
+    }
+    catch(error) {
+        errorJoke.style.display = 'block'
+    }
+
+_____________
+
+     let service = {
+        'Random': () => aJokeService.getRandom(),
+        'Short': () => aJokeService.getShort(),
+        'Shower': () => aJokeService.getShower(),
+        'Traditional': () => aJokeService.getTraditional()
+    }
+    let resp
+    try {
+        resp = await service[text]()
+    }
+    catch(error) {
+        errorJoke.style.display = 'block'
+    }

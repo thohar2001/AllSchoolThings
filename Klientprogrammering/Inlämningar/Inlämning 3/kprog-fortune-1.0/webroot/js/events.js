@@ -56,6 +56,7 @@ let currentJokes = []
 
 function updateJokes() {
     for (let para of oldJokes) {
+        console.log(oldJokes)
         document.body.removeChild(para)
     }
 
@@ -84,9 +85,6 @@ async function getJoke(evt) {
             document.body.removeChild(para)
         }
     }
-
-    
-    
     if (evt.target.innerText !== undefined) {
         text = evt.target.innerText
     }
@@ -141,9 +139,9 @@ async function getJoke(evt) {
     }
 
     if (currentJokes.length >= 10) {
-        oldJokes = Array.from(document.getElementsByTagName('p'))
-        currentJokes.pop()
         updateJokes()
+        currentJokes.pop()
+        oldJokes = Array.from(document.getElementsByTagName('p'))
     }
 }
 
